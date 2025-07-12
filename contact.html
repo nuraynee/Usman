@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="sa.png">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <title>Contact - Engr Usman Ibrahim</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+  
+    <nav>
+        <div class="logo">UI</div>
+      <ul class="nav-links">
+  <li><a href="main.html"><i class="fa fa-home"></i> Home</a></li>
+  <li><a href="about.html"><i class="fa fa-user"></i> About</a></li>
+  <li><a href="projects.html"><i class="fa fa-code"></i> Projects</a></li>
+  <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact</a></li>
+</ul>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <div class="contact-section">
+    <h1>Contact Me</h1>
+    <p>If you have any questions or just want to say hello, feel free to send me a message below or reach out via email!</p>
+        
+    <form id="contact-form" action="send_email.php" method="POST">
+
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <div class="error-message" id="name-error"></div>
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+    <div class="error-message" id="email-error"></div>
+  </div>
+
+  <div class="form-group">
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5"></textarea>
+    <div class="error-message" id="message-error"></div>
+  </div>
+
+  <button type="submit" class="submit-btn">Send Message</button>
+</form>
+
+<!-- Success Message -->
+<div id="response-message" class="hidden"></div>
+
+    
+    
+    
+
+    
+    <!-- Contact Information -->
+    <div class="contact-info">
+      <h2>Other Ways to Reach Me</h2>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:techtalent247@gmail.com">techtalent247@gmail.com</a></li>
+        <li><strong>Phone:</strong> 09125721210</li>
+        <li><strong>Instagram:</strong> <a href="https://Instagram.com/_usma_nibro_" target="_blank">_usma_nibro_</a></li>
+        <li><strong>GitHub:</strong> <a href="https://github.com/YourGitHub" target="_blank">Usman</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-info">
+        <h6>ENGR USMAN IBRAHIM</h6>
+        <p>Software Developer | Web Designer | Machine Learning Enthusiast</p>
+        <p>&copy; 2025 Engr Usman Ibrahim. All rights reserved.</p>
+      </div>
+      <div class="footer-social">
+        <a href="https://twitter.com/YourTwitter" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://linkedin.com/in/YourLinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Uibra" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+      <div class="footer-contact">
+        <a href="mailto:techtalent@gmail.com">Contact Me</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+ 
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  // Get form fields
+  const name = document.getElementById('name');
+  const email = document.getElementById('email');
+  const message = document.getElementById('message');
+
+  // Error elements
+  const nameError = document.getElementById('name-error');
+  const emailError = document.getElementById('email-error');
+  const messageError = document.getElementById('message-error');
+
+  // Reset errors
+  nameError.textContent = '';
+  emailError.textContent = '';
+  messageError.textContent = '';
+  let hasError = false;
+
+  // Name validation
+  if (name.value.trim() === '') {
+    nameError.textContent = 'Please enter your name.';
+    hasError = true;
+  }
+
+  // Email validation
+  if (email.value.trim() === '') {
+    emailError.textContent = 'Please enter your email.';
+    hasError = true;
+  } else if (!/^\S+@\S+\.\S+$/.test(email.value)) {
+    emailError.textContent = 'Please enter a valid email address.';
+    hasError = true;
+  }
+
+  // Message validation
+  if (message.value.trim() === '') {
+    messageError.textContent = 'Please enter your message.';
+    hasError = true;
+  }
+
+  if (!hasError) {
+    const responseMessage = document.getElementById('response-message');
+    responseMessage.textContent = 'Thank you for your message!';
+    responseMessage.classList.remove('hidden');
+
+    // Optionally clear the form
+    this.reset();
+  }
+});
+
+
+
+
+
+
+
+      function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+      document.querySelector('.hamburger').classList.toggle('active');
+    }
+      
+      
+      
+      
+
+  </script>
+  
+  
+  
+
+  
+</body>
+</html>
+
+
+
+
+
+

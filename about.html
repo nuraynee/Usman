@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon: The logo will appear here next to the title in the browser tab -->
+  <link rel="icon" type="image/png" sizes="32x32" href="sa.png">
+  <!-- Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+  <title>About - Engr Usman Ibrahim</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+  
+    <nav>
+        <div class="logo">UI</div>
+      <ul class="nav-links">
+  <li><a href="main.html"><i class="fa fa-home"></i> Home</a></li>
+  <li><a href="about.html"><i class="fa fa-user"></i> About</a></li>
+  <li><a href="projects.html"><i class="fa fa-code"></i> Projects</a></li>
+  <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact</a></li>
+</ul>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+  <div class="about-section">
+    <h1>About Me</h1>
+    <p>Hello! I'm <strong>Engr Usman Ibrahim</strong>, a passionate <span class="highlight">Software Developer</span> with a focus on building scalable and efficient solutions. I have a deep love for coding, problem-solving, and creating innovative solutions that make a real-world impact.</p>
+    
+    <div class="about-image">
+      <img src="ni.png" alt="Usman Ibrahim">
+    </div>
+
+    <div class="skills-section">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill">
+          <i class="fa fa-code"></i>
+          <h4>Programming</h4>
+          <p>Proficient in JavaScript, Python, and C++.</p>
+        </div>
+        <div class="skill">
+          <i class="fa fa-laptop"></i>
+          <h4>Web Development</h4>
+          <p>Expert in HTML, CSS, JavaScript, React, and Node.js.</p>
+        </div>
+        <div class="skill">
+          <i class="fa fa-cogs"></i>
+          <h4>Machine Learning</h4>
+          <p>Experience with TensorFlow, scikit-learn, and data analysis.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="experience-section">
+      <h2>My Journey</h2>
+      <p>I've been coding for over 5 years, starting as a hobby and turning it into a full-time passion. I began with building small web applications and eventually progressed to large-scale systems and software. I've also worked on machine learning projects, where I applied algorithms to solve real-world problems like predictive analytics and automation.</p>
+      <p>Currently, I’m honing my skills in full-stack development and looking for opportunities to collaborate and build innovative tech solutions.</p>
+    </div>
+
+    <div class="personal-section">
+      <h2>Personal Interests</h2>
+      <p>When I'm not coding, I love reading tech blogs, exploring new technologies, and playing strategy games. I’m also passionate about hiking and photography, which helps me to relax and recharge.</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-info">
+        <h6>ENGR USMAN IBRAHIM</h6>
+        <p>Software Developer | Web Designer | Machine Learning Enthusiast</p>
+        <p>&copy; 2025 Engr Usman Ibrahim. All rights reserved.</p>
+      </div>
+      <div class="footer-social">
+        <a href="https://twitter.com/YourTwitter" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://linkedin.com/in/YourLinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Uibra" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+      <div class="footer-contact">
+        <a href="mailto:techtalent247@gmail.com">Contact Me</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+  
+          function toggleMenu() {
+      document.querySelector('.nav-links').classList.toggle('active');
+      document.querySelector('.hamburger').classList.toggle('active');
+    }
+      
+  </script>
+</body>
+</html>
